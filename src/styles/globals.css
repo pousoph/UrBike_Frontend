@@ -1,77 +1,40 @@
-/* 🎨 Fuente global */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-/* 🧩 Variables globales */
-:root {
-    /* Colores de marca */
-    --color-primary: #1F8B4D;
-    --color-secondary: #2ECC71;
-    --color-soft-green: #A9DFBF;
-
-    /* Neutrales */
-    --color-text: #111827;
-    --color-text-muted: #6B7280;
-    --color-bg: #F9FAFB;
-    --color-white: #FFFFFF;
-
-    /* Sombras y bordes */
-    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --border-light: 1px solid #E5E7EB;
-
-    /* Tipografía */
-    --font-main: 'Inter', sans-serif;
-}
-
-/* 🔤 Reglas base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html, body {
     font-family: var(--font-main);
     background-color: var(--color-bg);
     color: var(--color-text);
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
+:root {
 
-/* 🖱️ Estilos globales de interacción */
-a {
-    color: var(--color-primary);
-    text-decoration: none;
-}
+    --color-primary: #2e8b57;      /* Verde sostenible */
+    --color-primary-light: #4caf7d;
+    --color-primary-dark: #1e5f3a;
 
-a:hover {
-    color: var(--color-secondary);
-}
 
-/* ✨ Botones base */
-button {
-    font-family: inherit;
-    cursor: pointer;
-    border: none;
-    outline: none;
-}
+    --color-secondary: #0078d7;    /* Azul confianza */
+    --color-secondary-light: #4aa3ff;
+    --color-secondary-dark: #0056a3;
 
-/* 🌈 Clases utilitarias (opcional) */
-.text-primary {
-    color: var(--color-primary);
-}
 
-.text-secondary {
-    color: var(--color-secondary);
-}
+    --color-bg: #f5f7fa;           /* Fondo general */
+    --color-surface: #ffffff;      /* Tarjetas, paneles */
+    --color-border: #dcdfe3;
+    --color-text: #333333;
+    --color-text-light: #666666;
 
-.bg-primary {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
+    /* 🚨 Colores de estado */
+    --color-success: #2ecc71;
+    --color-warning: #f1c40f;
+    --color-error: #e74c3c;
+    --color-info: #3498db;
 
-.bg-soft {
-    background-color: var(--color-soft-green);
-}
+    --shadow-soft: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.15);
 
-.shadow-soft {
-    box-shadow: var(--shadow-soft);
+    --font-main:'Instrument Sans', sans-serif;
+    --font-alternate: 'Instrument Sans', sans-serif;
+
+    --max-width: 1200px;
+    --border-radius: 8px;
 }

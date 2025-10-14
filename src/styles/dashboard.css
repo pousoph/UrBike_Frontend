@@ -1,0 +1,46 @@
+.dashboard {
+    padding: 3rem;
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    font-family: var(--font-main);
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-header button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dashboard-header button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.dashboard-body {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    padding: 1.5rem;
+    width: 280px;
+}
+
+.card h3 {
+    font-family: var(--font-alt);
+    color: var(--color-primary-dark);
+}
