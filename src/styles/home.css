@@ -57,7 +57,7 @@
 }
 
 .hero-text h1 {
-    font-family: var(--font-alt);
+    font-family: var(--font-main), serif;
     font-size: 2.8rem;
     font-weight: 700;
     color: var(--color-text);
@@ -146,7 +146,7 @@
 }
 
 .features h2 {
-    font-family: var(--font-alt);
+    font-family: var(--font-alternate);
     font-size: 2rem;
     color: var(--color-text);
 }
@@ -209,7 +209,7 @@
 }
 
 .benefits h3 {
-    font-family: var(--font-alt);
+    font-family: var(--font-alternate);
     color: var(--color-surface);
 }
 
@@ -260,7 +260,7 @@
 
 .why-urbike {
     text-align: center;
-    padding: 0rem 2rem;
+    padding: 5rem 2rem;
     background-color: var(--color-surface);
 }
 
@@ -269,27 +269,34 @@
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-text);
+    margin-bottom: 0.5rem;
 }
 
 .why-urbike p {
     color: var(--color-text-light);
     margin-top: 0.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
 }
 
+/* 🔹 Revisión completa del grid */
 .why-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
+    justify-items: center; /* ✅ Centra las tarjetas dentro de su celda */
+    align-items: stretch; /* Asegura alturas iguales */
     max-width: var(--max-width);
     margin: 0 auto;
 }
 
+/* 🎨 Tarjetas */
 .why-cards .card {
-    background-color: #f1f5f3; /* tono más suave que el fondo general */
+    background-color: #f6f9f7; /* Verde muy suave */
     padding: 2rem 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-soft);
+    width: 100%;
+    max-width: 230px; /* ✅ Mantiene proporción simétrica */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -310,17 +317,16 @@
     margin-bottom: 0.6rem;
 }
 
-/* TEXTOS DE TARJETAS */
 .why-cards p {
     color: var(--color-text-light);
     font-size: 0.95rem;
     line-height: 1.4;
 }
 
-/* 📱 RESPONSIVO */
+/* 📱 RESPONSIVE */
 @media (max-width: 1000px) {
     .why-cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 1.5rem;
     }
 }
@@ -328,11 +334,11 @@
 @media (max-width: 600px) {
     .why-cards {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
-/* ==============================
-   SECCIÓN: FÁCIL DE USAR
-   ============================== */
+
+
 .easy-use {
     padding: 5rem 3rem;
     max-width: var(--max-width);
@@ -342,7 +348,7 @@
 .easy-use h3 {
     font-size: 2rem;
     color: var(--color-text);
-    font-family: var(--font-alt);
+    font-family: var(--font-alternate);
     margin-bottom: 2rem;
 }
 
@@ -424,7 +430,7 @@
 .benefits-text h3 {
     color: var(--color-primary-dark);
     font-size: 2rem;
-    font-family: var(--font-alt);
+    font-family: var(--font-alternate);
     font-weight: 700;
     margin-bottom: 0.5rem;
 }

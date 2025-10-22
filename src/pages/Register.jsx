@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 import logo from "../assets/logo.svg";
-import { loginUser } from "../services/UserService.js";
+import { registerUser } from "../services/UserService.js";
 
-export const Login = () => {
+export const Register = () => {
     const navigate = useNavigate();
+    const [nombre, setNombre] = useState("");
     const [correo, setCorreo] = useState("");
     const [contrasena, setContrasena] = useState("");
     const [mensaje, setMensaje] = useState("");
@@ -14,19 +15,17 @@ export const Login = () => {
         e.preventDefault();
 
         try {
-            const data = await loginUser(correo, contrasena);
+            const data = await registerUser(nombre, correo, contrasena);
 
-            // Guardamos información del usuario
             localStorage.setItem("token", data.token);
             localStorage.setItem("nombre", data.nombre);
             localStorage.setItem("saldo", data.saldo);
 
-            setMensaje(`Bienvenido ${data.nombre}, tu saldo es $${data.saldo}`);
+            setMensaje(`✅ Bienvenido ${data.nombre}, registro exitoso.`);
 
-            // Redirige al Dashboard tras un breve delay
             setTimeout(() => navigate("/dashboard"), 1000);
         } catch {
-            setMensaje("Error al iniciar sesión. Verifica tus credenciales.");
+            setMensaje("❌ Error al registrarse. Intenta nuevamente.");
         }
     };
 
@@ -36,12 +35,24 @@ export const Login = () => {
                 <div className="login-header">
                     <img src={logo} alt="UrBike logo" className="login-logo" />
                     <h2>
-                        Bienvenido a <span>UrBike</span>
+                        Crea tu cuenta en <span>UrBike</span>
                     </h2>
-                    <p>Inicia sesión para continuar tu viaje sostenible 🌿</p>
+                    <p>Únete a la movilidad sostenible 🌿</p>
                 </div>
 
                 <form className="login-form" onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <label htmlFor="name">Nombre Completo</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Tu nombre completo"
+                            value={nombre}
+                            onChange={(e) => setNombre(e.target.value)}
+                            required
+                        />
+                    </div>
+
                     <div className="form-group">
                         <label htmlFor="email">Correo Electrónico</label>
                         <input
@@ -67,21 +78,21 @@ export const Login = () => {
                     </div>
 
                     <button type="submit" className="btn-primary">
-                        Iniciar Sesión
+                        Registrarse
                     </button>
 
                     {mensaje && <p className="login-message">{mensaje}</p>}
 
                     <p className="register-text">
-                        ¿No tienes cuenta?{" "}
+                        ¿Ya tienes cuenta?{" "}
                         <a
                             href="#"
                             onClick={(e) => {
                                 e.preventDefault();
-                                navigate("/register");
+                                navigate("/login");
                             }}
                         >
-                            Regístrate aquí
+                            Inicia sesión aquí
                         </a>
                     </p>
                 </form>

@@ -1,5 +1,5 @@
 import React from "react";
-import {FaArrowRight, FaCheckCircle, FaLeaf, FaStar} from "react-icons/fa"; // ✅ Importamos íconos
+import {FaArrowRight, FaCheckCircle, FaLeaf, FaStar} from "react-icons/fa";
 import "../styles/home.css";
 import logo from "../assets/logo.svg";
 import { useNavigate } from "react-router-dom";
