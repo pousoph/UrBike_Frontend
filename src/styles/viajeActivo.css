@@ -1,16 +1,14 @@
-/* ====== CONTENEDOR GENERAL ====== */
 .viaje-activo-wrapper {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #f3f5f4; /* blanco cálido */
+    background-color: #f3f5f4;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     position: relative;
 }
 
-/* ====== HEADER ====== */
 .viaje-header {
     position: absolute;
     top: 1rem;
@@ -37,7 +35,6 @@
     border-color: var(--color-error);
 }
 
-/* ====== TARJETA ====== */
 .viaje-card {
     background-color: var(--color-surface);
     border: 1px solid rgba(46, 139, 87, 0.1);
@@ -50,7 +47,6 @@
     animation: fadeIn 0.5s ease;
 }
 
-/* ====== TÍTULO ====== */
 .titulo {
     font-size: 1.7rem;
     color: var(--color-primary-dark);
@@ -61,7 +57,6 @@
     margin-bottom: 1.5rem;
 }
 
-/* ====== INFO ====== */
 .info {
     background-color: #f8faf9;
     border-radius: 10px;
@@ -76,7 +71,6 @@
     margin: 0.3rem 0;
 }
 
-/* ====== TIMER ====== */
 .timer {
     background-color: var(--color-primary-light);
     color: white;
@@ -93,7 +87,6 @@
     animation: pulse 2.5s infinite ease-in-out;
 }
 
-/* ====== BOTÓN ====== */
 .btn-finalizar {
     background-color: var(--color-error);
     color: white;
@@ -121,7 +114,6 @@
     animation: spin 1s linear infinite;
 }
 
-/* ====== MENSAJE ====== */
 .mensaje {
     margin-top: 1.5rem;
     padding: 0.9rem;
@@ -145,7 +137,6 @@
     color: var(--color-error);
 }
 
-/* ====== ANIMACIONES ====== */
 @keyframes pulse {
     0%, 100% {
         box-shadow: 0 0 8px rgba(46, 139, 87, 0.3);
@@ -183,7 +174,6 @@
     }
 }
 
-/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
     .viaje-card {
         padding: 1.8rem;
