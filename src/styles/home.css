@@ -265,7 +265,7 @@
 }
 
 .why-urbike h2 {
-    font-family: var(--font-alt);
+    font-family: var(--font-alternate);
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-text);

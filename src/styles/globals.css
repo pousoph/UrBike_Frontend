@@ -13,11 +13,6 @@ html, body {
     --color-primary-dark: #1e5f3a;
 
 
-    --color-secondary: #0078d7;    /* Azul confianza */
-    --color-secondary-light: #4aa3ff;
-    --color-secondary-dark: #0056a3;
-
-
     --color-bg: #f5f7fa;           /* Fondo general */
     --color-surface: #ffffff;      /* Tarjetas, paneles */
     --color-border: #dcdfe3;
