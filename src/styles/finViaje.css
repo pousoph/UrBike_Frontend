@@ -1,0 +1,161 @@
+.fin-viaje {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #f3f7f5 0%, #e8f2eb 100%);
+    padding: 2rem;
+}
+
+/* ===== CARD ===== */
+.fin-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    animation: fadeInUp 0.6s ease;
+    border-top: 6px solid var(--color-primary);
+}
+
+/* ===== ICONO ÉXITO ===== */
+.icono-exito {
+    color: var(--color-success);
+    margin-bottom: 1rem;
+    animation: pop 0.6s ease;
+}
+
+/* ===== TÍTULOS ===== */
+.fin-card h1 {
+    color: var(--color-primary-dark);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.agradecimiento {
+    color: var(--color-text-light);
+    margin-bottom: 1.8rem;
+    font-size: 1rem;
+}
+
+/* ===== FACTURA DETALLE ===== */
+.factura-detalle {
+    background-color: #f9fbfa;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    border-left: 4px solid var(--color-primary);
+    font-size: 0.95rem;
+}
+
+.factura-detalle p {
+    margin: 0.4rem 0;
+}
+
+.detalle-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.factura-detalle hr {
+    border: none;
+    border-top: 1px solid #dfe5e2;
+    margin: 1rem 0;
+}
+
+.total {
+    font-size: 1.1rem;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+}
+
+/* ===== OPCIONES DE PAGO ===== */
+.opciones-pago {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-pago-saldo,
+.btn-pago-tarjeta {
+    border: none;
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+/* Verde suave para saldo */
+.btn-pago-saldo {
+    background-color: var(--color-primary-light);
+    color: #fff;
+}
+
+.btn-pago-saldo:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(46, 139, 87, 0.25);
+}
+
+/* Tarjeta con tono más premium */
+.btn-pago-tarjeta {
+    background-color: var(--color-info);
+    color: #fff;
+}
+
+.btn-pago-tarjeta:hover {
+    background-color: #2179c7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.25);
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .fin-card {
+        padding: 2rem;
+    }
+    .fin-card h1 {
+        font-size: 1.5rem;
+    }
+    .opciones-pago {
+        gap: 0.8rem;
+    }
+}

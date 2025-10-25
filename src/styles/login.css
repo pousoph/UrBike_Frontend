@@ -24,7 +24,7 @@
 }
 
 .login-header h2 {
-    font-family: var(--font-alt);
+    font-family: var(--font-alternate);
     font-weight: 700;
     color: var(--color-text);
     margin: 1rem 0 0.5rem 0;
