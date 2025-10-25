@@ -7,6 +7,7 @@ import {InicioViaje} from "../pages/InicioViaje.jsx";
 import {ViajeActivo} from "../pages/ViajeActivo.jsx";
 import {FinViaje} from "../pages/FinViaje.jsx";
 import {PagoViaje} from "../pages/PagoViaje.jsx";
+import {PagoSaldo} from "../pages/PagoSaldo.jsx";
 
 export const AppRouter = () => {
     const token = localStorage.getItem("token");
@@ -22,6 +23,7 @@ export const AppRouter = () => {
                 <Route path="/viaje-activo" element={<ViajeActivo />} />
                 <Route path="/fin-viaje" element={<FinViaje />} />
                 <Route path="/pago-viaje" element={<PagoViaje />} />
+                <Route path="/pago-saldo" element={<PagoSaldo />} />
             </Routes>
         </BrowserRouter>
     );

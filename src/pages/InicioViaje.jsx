@@ -32,12 +32,9 @@ export const InicioViaje = () => {
                     success: true,
                     message: `Viaje iniciado correctamente (ID: ${idViaje})`,
                 });
-
-                // Guardar ID del viaje y número de serie
                 localStorage.setItem("id_viaje", idViaje);
                 localStorage.setItem("numero_serie", numeroSerie);
 
-                // Redirigir después de un breve delay
                 setTimeout(() => navigate("/viaje-activo"), 1500);
             }
         } catch (error) {
