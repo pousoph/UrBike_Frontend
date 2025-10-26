@@ -12,20 +12,23 @@ export const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setMensaje("");
 
         try {
             const data = await loginUser(correo, contrasena);
 
-            // Guardamos información del usuario
+
             localStorage.setItem("token", data.token);
+            localStorage.setItem("id_usuario", data.idUsuario || data.id);
             localStorage.setItem("nombre", data.nombre);
             localStorage.setItem("saldo", data.saldo);
+            localStorage.setItem("correo_usuario", data.correo);
 
-            setMensaje(`Bienvenido ${data.nombre}, tu saldo es $${data.saldo}`);
+            setMensaje(`Bienvenido, ${data.nombre}! 🚴‍♂️`);
 
-            // Redirige al Dashboard tras un breve delay
             setTimeout(() => navigate("/dashboard"), 1000);
-        } catch {
+        } catch (error) {
+            console.error("Error de login:", error);
             setMensaje("Error al iniciar sesión. Verifica tus credenciales.");
         }
     };

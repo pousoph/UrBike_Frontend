@@ -21,11 +21,11 @@ export const Register = () => {
             localStorage.setItem("nombre", data.nombre);
             localStorage.setItem("saldo", data.saldo);
 
-            setMensaje(`✅ Bienvenido ${data.nombre}, registro exitoso.`);
+            setMensaje(`Bienvenido ${data.nombre}, registro exitoso.`);
 
             setTimeout(() => navigate("/dashboard"), 1000);
         } catch {
-            setMensaje("❌ Error al registrarse. Intenta nuevamente.");
+            setMensaje("Error al registrarse. Intenta nuevamente.");
         }
     };
 

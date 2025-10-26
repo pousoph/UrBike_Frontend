@@ -40,9 +40,6 @@ export const ViajeActivo = () => {
 
             setMensaje("Viaje finalizado correctamente ✅");
 
-            localStorage.removeItem("id_viaje");
-            localStorage.removeItem("numero_serie");
-            localStorage.removeItem("inicio_viaje");
 
             setTimeout(() => navigate("/fin-viaje", { state: { factura } }), 1500);
         } catch (error) {

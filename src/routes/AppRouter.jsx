@@ -22,7 +22,7 @@ export const AppRouter = () => {
                 <Route path="/inicio-viaje" element={<InicioViaje />} />
                 <Route path="/viaje-activo" element={<ViajeActivo />} />
                 <Route path="/fin-viaje" element={<FinViaje />} />
-                <Route path="/pago-viaje" element={<PagoViaje />} />
+                <Route path="/pago-tarjeta" element={<PagoViaje />} />
                 <Route path="/pago-saldo" element={<PagoSaldo />} />
             </Routes>
         </BrowserRouter>
